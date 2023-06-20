@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contato</title>
+        <meta charset= "utf-8">
+        <link rel="icon" type="img/jpg" href="img/icone.jpg">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <script language="javascript" type="text/javascript">
+   
+            function validar(){
+            var nome = contato.nome.value;
+            var email = contato.email.value;
+            var telefone = contato.telefone.value;
+            var endereco = contato.endereco.value;
+            var comentario = contato.comentario.value;
+
+            if (nome == ""){
+                alert('Por favor preencha o campo nome!');
+                contato.nome.focus();
+                return false;
+            }
+
+            if (email == ""){
+                alert('Por favor preencha o campo email!');
+                contato.email.focus();
+                return false;
+            }
+
+            if (telefone == ""){
+                alert('Por favor preencha o campo telefone!');
+                contato.telefone.focus();
+                return false;
+            }
+
+            if (endereco == ""){
+                alert('Por favor preencha o campo endereço!');
+                contato.endereço.focus();
+                return false;
+            }
+
+            if (nome.length < 5){
+                alert('Por favor coloque o nome completo!');
+                contato.nome.focus();
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div id="all">
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="história.html">História</a></li>
+                <li><a href="obras.html">Obras</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+        <hr>
+        <br><br>
+        <center><b><h1>Entre em contato</h1></b></center>
+        <br><br>
+        <form name="contato" action="contato2.html" method="post">
+          <div align="center">
+            Nome:<input type="text" name="nome"><br><br>
+            Email:<input type="text" name="email"><br><br>
+            Telefone:<input type="text" name="telefone"><br><br>
+            Endereço:<input type="text" name="endereco"><br><br>
+            <input type="radio" name="sexo" value="op1">Masculino
+			<input type="radio" name="sexo" value="op2">Feminino <br>
+			<textarea cols="45" rows="25" name="comentario">Deixe seu comentário</textarea>
+            <br>
+            <input type="submit" onclick="return validar()" value="Enviar">
+            <input type="reset" name="limpa" value="Limpar">
+        </div>
+        </form>
+        <hr>
+        <div img align="right"> <a href="#"> <img src="img/seta2.png" width="3%" /></a> </div>
+        <h5><center> Renan Ortiz 2023 - &copyTodos os direitos reservados </center></h5>
+    </body>
+</html>
